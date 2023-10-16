@@ -1,9 +1,9 @@
 import requests
 import schedule
 import time
-from twilio.rest import Client  # You need to import the Twilio Client
+from twilio.rest import Client  
 
-# Define the Celsius to Fahrenheit conversion function
+
 def celsius_to_fahrenheit(celsius):
     return (celsius * 9/5) + 32  # Fixed the formula and the missing parentheses
 
@@ -14,7 +14,7 @@ def send_text_message(body):
     from_phone_number = "from_phone_number"
     to_phone_number = "to_phone_number"
 
-    # Initialize the Twilio client
+    
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
